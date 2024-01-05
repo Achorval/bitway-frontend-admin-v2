@@ -48,9 +48,11 @@ const UserProvider = (props) => {
     /** Fetch Service*/
     const fetchServices = async (params) => {
         try {
-            await request(`${process.env.REACT_APP_API_URL}/admin/services`,{ method: 'GET', params: params }).then((res) => 
-                setServices(res.details)
-            );
+            setIsLoading(true);
+            await request(`${process.env.REACT_APP_API_URL}/admin/services`,{ method: 'GET', params: params }).then((res) => {
+                setServices(res.details);
+                setIsLoading(false);
+            });
         } catch (error) {
             throw error; 
         }

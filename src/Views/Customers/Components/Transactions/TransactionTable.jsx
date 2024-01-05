@@ -111,7 +111,7 @@ const TransactionTable = () => {
                                 />
                             </div>
                             <div className="table-responsive">
-                                <Table>
+                                <Table className="text-center">
                                     <thead>
                                         <tr>
                                             <th scope="col">{'#'}</th>

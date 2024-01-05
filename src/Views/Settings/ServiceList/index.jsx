@@ -13,7 +13,7 @@ const ServiceContain = () => {
             <Breadcrumbs mainTitle='Services' parent="Settings" title="Services" />
             <Container fluid={true}>
                 <ServiceTable toggleModal={toggleModal} />
-                <ServiceForm open={open} toggleModal={toggleModal} />
+                {open && <ServiceForm open={open} toggleModal={toggleModal} />}
             </Container>
         </Fragment>
     );

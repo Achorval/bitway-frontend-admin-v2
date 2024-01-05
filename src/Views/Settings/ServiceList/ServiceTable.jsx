@@ -68,7 +68,7 @@ const ServiceTable = ({ toggleModal }) => {
                     {services && services.allItems && services.allItems.length > 0 ? (
                     <Fragment>
                         <div className="table-responsive">
-                            <Table>
+                            <Table className="text-center">
                                 <thead>
                                     <tr>
                                         <th scope="col">{'#'}</th>
@@ -88,7 +88,7 @@ const ServiceTable = ({ toggleModal }) => {
                                             <td>{item.description}</td>
                                             <td><Badges attrBadge={{ className: 'badge rounded-pill', color: `${item.status ? 'success' : 'danger'}` }}>{item.status ? 'Active' : 'Inactive'}</Badges></td>
                                             <td>
-                                                <div className="d-flex gap-2">
+                                                <div className="d-flex align-items-center justify-content-center gap-2">
                                                     <Btn attrBtn={{ color: 'primary', size: 'sm', onClick: () => { toggleModal(); setService(item)} }}> 
                                                         <i className='fa fa-pencil'></i> Edit
                                                     </Btn>
